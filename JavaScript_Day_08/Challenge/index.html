@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search</title>
+
+    <style>
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 15px;
+        }
+        .productCard {
+            border: 1px solid #bfbfbf;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Products</h2>
+    
+    <header>
+        
+        <input type="text" id="search" placeholder="Search by title">
+        <input type="number" id="price" placeholder="Maximum Price">
+        
+        <select name="category" id="category">
+            <option value="allProducts">All Products</option>
+            <option value="electronics">Electronics</option>
+            <option value="jewelery">Jewelery</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's Clothing</option>
+        </select>
+    </header>
+
+    <h2 id="count"></h2>
+
+    <section id="products" class="products"></section>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
